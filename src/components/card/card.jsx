@@ -6,7 +6,7 @@ function Card() {
   <div className="min-h-screen bg-[url('https://i.pinimg.com/736x/5a/78/0e/5a780ea661152f90631e33ec3ac43cde.jpg')] bg-cover bg-center flex items-center justify-center px-4">
       <div className="backdrop-blur-md bg-white/10 border border-white/30 rounded-3xl p-6 w-full max-w-sm text-white shadow-xl">
         <img
-          src="public\images\weddinglogo.png"
+          src="public/images/weddinglogo.png"
           alt="Wedding Logo"
           className="w-20 sm:w-24 mx-auto mb-4 sm:mb-6"
         />
