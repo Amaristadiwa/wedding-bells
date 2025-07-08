@@ -6,14 +6,13 @@ export default function Login({ setUser }) {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    // Simulate login by saving a user to localStorage
+    
     const dummyUser = { name: 'Demo User' };
     localStorage.setItem('user', JSON.stringify(dummyUser));
 
-    // Update user state in App.jsx
+
     setUser(dummyUser);
 
-    // Navigate to protected home page
     navigate('/home');
   };
 
@@ -21,7 +20,7 @@ export default function Login({ setUser }) {
     <div className="min-h-screen bg-[url('https://i.pinimg.com/736x/5a/78/0e/5a780ea661152f90631e33ec3ac43cde.jpg')] bg-cover bg-center flex items-center justify-center px-4">
       <div className="backdrop-blur-md bg-white/10 border border-white/30 rounded-3xl p-6 w-full max-w-sm text-white shadow-xl">
         <img
-          src="public/images/weddinglogo.png"
+          src="../public/images/weddinglogo.png"
           alt="Wedding Bells Logo"
           className="w-20 mx-auto mb-4"
         />
