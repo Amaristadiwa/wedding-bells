@@ -15,7 +15,7 @@ export default function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<Card />} />
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login setUser={setUser} />} />
       <Route path="/signup" element={<Signup />} />
       <Route path="/dashboard" element={<Dashboard />} />
