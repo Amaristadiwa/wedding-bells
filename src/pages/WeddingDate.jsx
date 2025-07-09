@@ -3,23 +3,22 @@ import { useNavigate } from 'react-router-dom';
 import { usePlanning } from '../components/Context/Planningcontext';
 import StepWrapper from '../components/Stepwrapper';
 
-export default function CoupleNames() {
+export default function WeddingDate() {
   const navigate = useNavigate();
   const { form, setForm } = usePlanning();
 
   const handleNext = (e) => {
     e.preventDefault();
-    navigate('/start/wedding-date');
+    navigate('/start/location');
   };
 
   return (
-    <StepWrapper title="Your Names" onSubmit={handleNext}>
+    <StepWrapper title="Wedding Date" onSubmit={handleNext}>
       <input
-        type="text"
-        name="coupleNames"
-        value={form.coupleNames}
-        onChange={(e) => setForm({ ...form, coupleNames: e.target.value })}
-        placeholder="e.g. Tadiwa & Chipo"
+        type="date"
+        name="weddingDate"
+        value={form.weddingDate}
+        onChange={(e) => setForm({ ...form, weddingDate: e.target.value })}
         className="w-full px-4 py-2 rounded-xl border border-pink-300 focus:outline-none"
         required
       />

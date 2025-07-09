@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+    const navigate = useNavigate(); 
 
 const heroImages = [
   { id: 1, label: "Beach Wedding", url: "https://i.pinimg.com/736x/c3/47/20/c34720d8b5c44d19a2e6906f65fc34c3.jpg" },
@@ -158,7 +160,7 @@ const storyList = [
         )}
       </nav>
 
-      {/* Hero */}
+      
       <section className="text-center py-12 px-4 bg-pink-50">
         <h1 className="text-3xl md:text-5xl font-bold mb-4">
           Plan Your <span className="text-pink-600">Dream Wedding</span> With Us
@@ -166,9 +168,12 @@ const storyList = [
         <p className="max-w-xl mx-auto text-gray-600 mb-6">
           From venues to vendors, everything you need to create your perfect day.
         </p>
-        <button className="bg-pink-600 text-white px-6 py-3 rounded-full">
-          Start Planning
-        </button>
+          <button
+  onClick={() => navigate('/start/couple-names')}
+  className="bg-pink-600 hover:bg-pink-700 transition-colors duration-300 text-white px-6 py-3 rounded-full"
+>
+  Start Planning
+</button>
 
         <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
 {heroImages.map((img) => (
